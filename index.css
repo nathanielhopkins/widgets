@@ -16,3 +16,23 @@ span, article, footer, time, small {
   background: transparent;
   list-style: none;
 }
+
+body{
+  font-family: Zen Tokyo Zoo;
+  line-height: 1.2;
+}
+
+h1{
+  font-size: 28px;
+  font-weight: 700;
+  margin: 20px 10px 10px 20px;
+}
+
+/* Clock */
+
+.clock {
+  font-family: Rubik;
+  font-size: 28px;
+  color: lime;
+  background: black;
+}
