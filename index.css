@@ -20,6 +20,8 @@ span, article, footer, time, small {
 body{
   font-family: Zen Tokyo Zoo;
   line-height: 1.2;
+  display: flex;
+  justify-content: space-around;
 }
 
 h1{
@@ -35,4 +37,15 @@ h1{
   font-size: 28px;
   color: lime;
   background: black;
+  width: 550px;
+  height: 94px;
+  margin: 0 20px 20px 20px;
+  padding: 10px;
+  border: lime 2px solid;
+}
+
+.clock p{
+  margin: 12px;
+  display: flex;
+  justify-content: space-between;
 }
