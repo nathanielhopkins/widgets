@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM, { render } from 'react-dom';
 
+import Clock from './clock';
+
 function Root() {
   return(
     <div>
-      <h1>It worked.</h1>
+      <Clock />
     </div>
   );
 }
