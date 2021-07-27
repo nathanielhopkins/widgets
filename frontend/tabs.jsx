@@ -6,13 +6,15 @@ export default class Tabs extends React.Component {
     super(props);
 
     this.state = {
-  
+      selected: 0
     };
   };
 
   render() {
     return(
-      <h1>Tabs</h1>
+      <div>
+        <h1>Tabs</h1>
+      </div>
     )
   }
 }
