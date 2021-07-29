@@ -31,10 +31,15 @@ export default class Tabs extends React.Component {
   constructor(props) {
     super(props);
 
+    this.selectTab.bind(this);
     this.state = {
       selected: 0
     };
   };
+
+  selectTab(num) {
+    this.setState({selected: num});
+  }
 
   render() {
     let selectedTab = this.props.tabs[this.state.selected];
@@ -44,6 +49,7 @@ export default class Tabs extends React.Component {
         <div className="tabs">
          <Headers
           selectedTab = {this.state.selected}
+          onTabClick = {this.selectTab}
           tabs = {this.props.tabs}>  
           </Headers>
         </div>
