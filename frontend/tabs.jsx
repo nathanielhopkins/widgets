@@ -12,6 +12,7 @@ class Headers extends React.Component {
       return (
         <li 
           key = {index}
+          onClick={() => this.props.onTabClick(index)}
           className = {isSelected}>
           {title}
         </li>
@@ -31,7 +32,7 @@ export default class Tabs extends React.Component {
   constructor(props) {
     super(props);
 
-    this.selectTab.bind(this);
+    this.selectTab = this.selectTab.bind(this);
     this.state = {
       selected: 0
     };
