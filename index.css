@@ -42,10 +42,68 @@ h1{
   margin: 0 20px 20px 20px;
   padding: 10px;
   border: lime 2px solid;
+  margin-bottom: 100px;
 }
 
 .clock p{
   margin: 12px;
   display: flex;
   justify-content: space-between;
+}
+
+/* Tabs */
+
+.tabs {
+  width: 300px;
+  height: 500px;
+}
+
+.tab-content {
+  font-size: 30px;
+  font-weight: normal;
+  background-color: orchid;
+  border-left: black solid 2px;
+  border-bottom: black solid 2px;
+  border-right: black solid 2px;
+  text-align: center;
+  padding: 100px 0px;
+}
+
+.tab-headers {
+  display: flex;
+  justify-content: space-around;
+  font-size: 28px;
+  font-weight: bold;
+  background-color: orchid;
+  border-top: black 2px solid;
+  border-left: black 2px solid;
+  border-right: black 2px solid;
+  border-radius: 20px 20px 0 0;
+}
+
+.tab-headers > li {
+  border-bottom: 2px solid black;
+  padding: 0px 29px;
+}
+
+.tab-headers :nth-child(2), .tab-headers :nth-child(3) {
+  border-left: 2px solid black;
+}
+
+.tab-headers > li.selected {
+  border-bottom: none;
+}
+
+.tab-headers :first-child {
+  border-radius: 20px 0 0 0;
+}
+
+.tab-headers :last-child {
+  border-radius: 0 20px 0 0;
+}
+
+.tab-headers > li:hover {
+  background-color: black;
+  color: orchid;
+  cursor: pointer;
 }
