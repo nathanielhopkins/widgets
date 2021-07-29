@@ -107,3 +107,9 @@ h1{
   color: orchid;
   cursor: pointer;
 }
+
+/* Weather  */
+
+.weather {
+  margin-bottom: 100px;
+}
