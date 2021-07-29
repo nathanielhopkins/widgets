@@ -53,9 +53,11 @@ export default class Tabs extends React.Component {
           onTabClick = {this.selectTab}
           tabs = {this.props.tabs}>  
           </Headers>
-        </div>
         <div className='tab-content'>
-          <p>{selectedTab.content}</p>
+          <article>
+            <p>{selectedTab.content}</p>
+          </article>
+        </div>
         </div>
       </div>
     )
