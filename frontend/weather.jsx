@@ -7,9 +7,10 @@ export default class Weather extends React.Component {
     this.apiKey = '44c786ec5bdf4f23b852fd62061e29aa'
     this.getWeather = this.getWeather.bind(this);
     this.updateWeather = this.updateWeather.bind(this);
+    this.parseWeather = this.parseWeather.bind(this);
 
     this.state = {
-      weather: "Loading current weather..."
+      weather: <p className='weather-loading'>Loading current weather...</p>
     };
   }
  
@@ -41,8 +42,24 @@ export default class Weather extends React.Component {
     req.send();
   }
 
+  parseWeather(weather) {
+    let imgURL = `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`
+    return (
+      <div className="weather-data">
+        <div className="weather-data-description">
+          <p><strong>Location: </strong>{weather.name}</p>
+          <p><strong>Temp: </strong>{weather.main.temp}F</p>
+          <p><strong>Description: </strong>{weather.weather[0].description}</p>
+        </div>
+        <img src={imgURL} className="weather-img"/>
+      </div>
+    )
+  }
+
   updateWeather(res) {
-    console.log(res);
+    let weather = JSON.parse(res);
+  
+    this.setState({weather: this.parseWeather(weather)});
   }
 
   render() {
@@ -50,9 +67,7 @@ export default class Weather extends React.Component {
       <div>
         <h1>Weather</h1>
         <div className="weather">
-          <article>
-            <p>{this.state.weather}</p>
-          </article>
+          {this.state.weather}
         </div>
       </div>
     );
