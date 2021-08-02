@@ -4,6 +4,7 @@ import ReactDOM, { render } from 'react-dom';
 import Clock from './clock';
 import Tabs from './tabs';
 import Weather from './weather';
+import AutoComplete from './autocomplete';
 
 let tabs = [
   { 'title': 'tab1', 'content': 'this is the first tab' },
@@ -17,6 +18,7 @@ function Root() {
       <Clock />
       <Weather />
       <Tabs tabs={tabs}/>
+      <AutoComplete />
     </div>
   );
 }
