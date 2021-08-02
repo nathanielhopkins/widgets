@@ -12,8 +12,8 @@ export default class AutoComplete extends React.Component {
   render() {
     let filtered;
 
-    if(this.state.inputVal = '') {
-      filered = this.props.names;
+    if(this.state.inputVal === '') {
+      filtered = this.props.names;
     }
 
     let renderProps = filtered.map((name, index) => {
