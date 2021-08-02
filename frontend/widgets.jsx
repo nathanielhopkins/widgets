@@ -12,13 +12,23 @@ let tabs = [
   { 'title': 'tab3', 'content': 'this is the third tab' }
 ];
 
+let names = [
+  'Dick Chiclets',
+  'Mic Flair',
+  'Nancy Drew',
+  'Thomas Dwayne',
+  'Xavier Valentine',
+  'Lizzie',
+  'Kirk Jerkims'
+]
+
 function Root() {
   return(
     <div>
       <Clock />
       <Weather />
       <Tabs tabs={tabs}/>
-      <AutoComplete />
+      <AutoComplete names={names}/>
     </div>
   );
 }
