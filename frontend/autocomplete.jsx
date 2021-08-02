@@ -4,6 +4,9 @@ export default class AutoComplete extends React.Component {
   constructor(props) {
     super(props)
 
+    this.state = {
+      inputVal = ''
+    }
   }
 
   render() {
@@ -11,7 +14,7 @@ export default class AutoComplete extends React.Component {
       <div>
         <h1>Autocomplete</h1>
         <div className="autocomplete">
-          
+
         </div>
       </div>
     )
