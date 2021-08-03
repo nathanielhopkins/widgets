@@ -9,8 +9,14 @@ export default class AutoComplete extends React.Component {
       inputVal:''
     };
 
+    this.clearSearch = this.clearSearch.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.inputChange = this.inputChange.bind(this);
+  }
+
+  clearSearch(event) {
+    event.preventDefault();
+    this.setState({inputVal: ''})
   }
 
   handleClick(event) {
@@ -49,6 +55,7 @@ export default class AutoComplete extends React.Component {
               placeholder="Enter a name to search..."
               ></input>
               <button 
+                onClick={this.clearSearch}
                 className='search-clear'>Clear</button>
             <ul className='autocomplete-results'>
               <ReactCSSTransitionGroup
