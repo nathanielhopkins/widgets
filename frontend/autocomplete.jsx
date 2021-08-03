@@ -48,6 +48,8 @@ export default class AutoComplete extends React.Component {
               className="search-input" 
               placeholder="Enter a name to search..."
               ></input>
+              <button 
+                className='search-clear'>Clear</button>
             <ul className='autocomplete-results'>
               <ReactCSSTransitionGroup
                 transitionName="auto"
