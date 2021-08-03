@@ -8,7 +8,13 @@ export default class AutoComplete extends React.Component {
       inputVal:''
     };
 
-    this.inputChange =this.inputChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.inputChange = this.inputChange.bind(this);
+  }
+
+  handleClick(event) {
+    event.preventDefault();
+    this.setState({inputVal: event.target.textContent})
   }
 
   inputChange(event) {
@@ -26,7 +32,7 @@ export default class AutoComplete extends React.Component {
     }
 
     let renderProps = filtered.map((name, index) => {
-      return (<li key={index}>{name}</li>);
+      return (<li key={index} onClick={this.handleClick}>{name}</li>);
     });
 
     return(
