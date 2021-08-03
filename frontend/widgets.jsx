@@ -18,8 +18,8 @@ let names = [
   'Nancy Drew',
   'Thomas Dwayne',
   'Xavier Valentine',
-  'Lizzie',
-  'Kirk Jerkims'
+  'Kirk Jerkims',
+  'Dick Dastardly'
 ]
 
 function Root() {
