@@ -30,6 +30,11 @@ h1{
   margin: 20px 10px 10px 20px;
 }
 
+.interactive {
+  display: flex;
+  justify-content: space-around;
+}
+
 /* Clock */
 
 .clock {
@@ -142,7 +147,7 @@ h1{
 
 .autocomplete {
   background-color:coral;
-  width: 300px;
+  width: 250px;
   height: 300px;
   font-family: Rubik;
   border: 2px solid black;
@@ -167,7 +172,7 @@ h1{
 
 ul.autocomplete-results {
   display: block;
-  padding-left: 50px;
+  padding-left: 30px;
 }
 
 ul.autocomplete-results li {
