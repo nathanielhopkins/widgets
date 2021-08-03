@@ -7,7 +7,14 @@ export default class AutoComplete extends React.Component {
     this.state = {
       inputVal:''
     };
+
+    this.inputChange =this.inputChange.bind(this);
   }
+
+  inputChange(event) {
+    event.preventDefault();
+    this.setState({inputVal: event.target.value});
+  } 
 
   render() {
     let filtered;
@@ -15,7 +22,7 @@ export default class AutoComplete extends React.Component {
     if(this.state.inputVal === '') {
       filtered = this.props.names;
     } else {
-      filtered = this.props.names.startsWith(this.state.inputVal);
+      filtered = this.props.names.filter((name) => name.toLowerCase().startsWith(this.state.inputVal.toLowerCase()));
     }
 
     let renderProps = filtered.map((name, index) => {
@@ -26,7 +33,7 @@ export default class AutoComplete extends React.Component {
       <div>
         <h1>Autocomplete</h1>
         <div className="autocomplete">
-          <input type="text" className="search-input" placeholder="Enter a name to search..."></input>
+          <input value={this.state.inputVal} onChange={this.inputChange} type="text" className="search-input" placeholder="Enter a name to search..."></input>
           <ul className='autocomplete-results'>
             {renderProps}
           </ul>
