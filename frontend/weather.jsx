@@ -15,7 +15,14 @@ export default class Weather extends React.Component {
   }
  
   componentDidMount() {
-    navigator.geolocation.getCurrentPosition((location) => this.getWeather(location));
+    navigator.geolocation.getCurrentPosition((location) => {
+      this.getWeather(location);
+      this.intervalId = setInterval(this.getWeather(location), 60000);
+    });
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalId);
   }
 
   getWeather(location) {
