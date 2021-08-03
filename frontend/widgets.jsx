@@ -27,8 +27,10 @@ function Root() {
     <div>
       <Clock />
       <Weather />
-      <Tabs tabs={tabs}/>
-      <AutoComplete names={names}/>
+      <div className="interactive">
+        <Tabs tabs={tabs}/>
+        <AutoComplete names={names}/>
+      </div>
     </div>
   );
 }
