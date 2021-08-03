@@ -39,16 +39,18 @@ export default class AutoComplete extends React.Component {
       <div>
         <h1>Autocomplete</h1>
         <div className="autocomplete">
-          <input 
-            value={this.state.inputVal} 
-            onChange={this.inputChange} 
-            type="text" 
-            className="search-input" 
-            placeholder="Enter a name to search..."
-            ></input>
-          <ul className='autocomplete-results'>
-            {renderProps}
-          </ul>
+          <div className="autocomplete-contents">
+            <input 
+              value={this.state.inputVal} 
+              onChange={this.inputChange} 
+              type="text" 
+              className="search-input" 
+              placeholder="Enter a name to search..."
+              ></input>
+            <ul className='autocomplete-results'>
+              {renderProps}
+            </ul>
+          </div>
         </div>
       </div>
     )
